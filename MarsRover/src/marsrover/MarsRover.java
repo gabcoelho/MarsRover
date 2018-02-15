@@ -15,43 +15,42 @@ public class MarsRover {
         int x = 0;
         int y = 0;
         String orientation = "";
-        
+        System.out.println("Enter the maximum coordinate of X and Y:");
+        Scanner readCoordinatesXY = new Scanner(System.in);
+	String maxCoordinateXY = readCoordinatesXY.nextLine();
         do {
-            //Captures the initial position of the rover
-            System.out.println("Informe o posicionamento de X do rover: ");
+            System.out.println("Enter X position of the Rover: ");
             Scanner readX = new Scanner(System.in);
             x = readX.nextInt();
             
-            System.out.println("Informe o posicionamento de Y do rover: ");
+            System.out.println("Enter Y position of the Rover: ");
             Scanner readY = new Scanner(System.in);
             y = readY.nextInt();
 
-            System.out.println("Informe a orientação do rover: ");
+            System.out.println("Enter the direction the Rover is facing: ");
             Scanner readOrientation = new Scanner(System.in);
             orientation = readOrientation.nextLine();
             
             Rover rover = new Rover(x, y, RoverDirections.valueOf(orientation));
             
-            System.out.println("Informe a movimentação do rover: ");
-            //Capture moviment required for the rover 
+            System.out.println("Where would you like the Rover to move to?  ");
             Scanner readMovimentacao = new Scanner(System.in);
             String movimentacao = readMovimentacao.nextLine();
 		
-           // Rover rover1 = new Rover();
             movement.executeMovement(rover, movimentacao);
             rover.printRover(rover);
             
-            System.out.println("Cadastrar novo rover (s/n) ");
+            System.out.println("New Rover (Y/N) ");
             Scanner readContinue = new Scanner(System.in);
             continueW = readContinue.nextLine();
 			
-	} while(continueW.toUpperCase().equals("S"));    
+	    } while(continueW.toUpperCase().equals("Y"));   
         
-        /*  Rover rover = new Rover(1, 2, RoverDirections.NORTH);
+        /*  Rover rover = new Rover(1, 2, RoverDirections.N);
         rover = movement.executeMovement(rover, "LMLMLMLMM");
         rover.printRover(rover);
 
-        rover = new Rover(3, 3, RoverDirections.EAST);
+        rover = new Rover(3, 3, RoverDirections.E);
         rover = movement.executeMovement(rover, "MMRMMRMRRM");
         rover.printRover(rover);
         */
