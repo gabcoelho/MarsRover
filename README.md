@@ -39,7 +39,6 @@ Expected Output: 1 3 N<br>
 <h4><a id="Rover_Class_44"></a>Rover Class</h4>
 <p>Rover Class that defines the characteristics of a Rover, with its coordinates and directions.</p>
 <pre><code class="language-sh">public class Rover {
-    //private Integer directionValue = RoverDirections.N.numDirection;
     
     private Integer posX;
     private Integer posY;
@@ -184,15 +183,16 @@ HashMap is used, given that it works with the concept of key-value pairs.</p>
    
     
     public static void main(String[] args) {
-        Movement movement = new Movement();
+    	Movement movement = new Movement();
 	String continueW = "";
         int x = 0;
         int y = 0;
         String orientation = "";
         System.out.println("Enter the maximum coordinate of X and Y:");
         Scanner readCoordinatesXY = new Scanner(System.in);
-	    String maxCoordinateXY = readCoordinatesXY.nextLine();
-        do {
+	String maxCoordinateXY = readCoordinatesXY.nextLine();
+	
+        do{
             System.out.println("Enter X position of the Rover: ");
             Scanner readX = new Scanner(System.in);
             x = readX.nextInt();
