@@ -183,7 +183,8 @@ HashMap is used, given that it works with the concept of key-value pairs.</p>
    
     
     public static void main(String[] args) {
-    	Movement movement = new Movement();
+    	
+	Movement movement = new Movement();
 	String continueW = "";
         int x = 0;
         int y = 0;
