@@ -34,8 +34,8 @@ public class MarsRover {
             Rover rover = new Rover(x, y, RoverDirections.valueOf(orientation));
             
             System.out.println("Where would you like the Rover to move to?  ");
-            Scanner readMovimentacao = new Scanner(System.in);
-            String movimentacao = readMovimentacao.nextLine();
+            Scanner readMovement = new Scanner(System.in);
+            String movement = readMovement.nextLine();
 		
             movement.executeMovement(rover, movimentacao);
             rover.printRover(rover);
